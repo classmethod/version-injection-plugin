@@ -41,7 +41,7 @@ buildDir = "target"
 dependencies {
     compile gradleApi()
     compile localGroovy()
-    compile 'org.javassist:javassist:3.18.1-GA'
+    compile 'org.javassist:javassist:3.23.1-GA'
 }
 
 
