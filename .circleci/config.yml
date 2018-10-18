@@ -12,11 +12,11 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "build.gradle" }}-{{ checksum "gradle.properties" }}
+          - v1-dependencies-{{ checksum "build.gradle" }}
           - v1-dependencies-
       - run: ./gradlew check
       - save_cache:
           paths:
             - ~/.m2
             - ~/.gradle
-          key: v1-dependencies-{{ checksum "build.gradle" }}-{{ checksum "gradle.properties" }}
+          key: v1-dependencies-{{ checksum "build.gradle" }}
